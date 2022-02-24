@@ -1,0 +1,38 @@
+FIXED SIZE PARTITIONING
+
+while(j < size){
+
+    calculations;
+    
+    if(j-1+1 < k){
+        j++;
+    }
+    else if(j-i+1 == k){
+        ans <- calculations;
+
+        calculation to remove i;
+        maintain window size and slide: i++; j++;
+    }
+
+}
+
+
+VARIABLE SIZE PARTITIONING
+
+here k is the condition 
+while(j < size){
+
+    calculations;
+
+    if(intermediate_calculation < k){
+        j++;
+    }
+    else if(intermediate_calculation  == k){
+        ans <- calculations;
+        j++;
+    }
+    else if(intermediate_calculation  > k){
+        perform calculations to reduce window size to satisfy condition (i++ and some calculations);
+        j++;
+    }
+}

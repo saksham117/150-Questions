@@ -1,0 +1,11 @@
+Five Things That Helped Me Crack Microsoft
+    - DSA
+    - Consisitency
+    - OOPS,DBMS,CN,OS (OS ke questions puche gaye the, CN chodha jaa sakta hai)
+    - Low level System Design 
+
+During Interview
+    1. Speed (try to give leetcode contest & practice as much)
+    2. Code quality ( cover edge cases)
+    3. Communication (explain everything)
+    Gem of a man - Striver!

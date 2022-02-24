@@ -1,0 +1,12 @@
+Will be applicable in questions where there are 2 things asked 
+    1) Some K elements are required 
+    2) We need to find min or max.  
+    3) Heap ke saare questions are some sort of sorting questions (reduces complexity from nlogn to nlogk, 
+                                                                where k is the size of the heap)
+Also if we need to find K smallest 
+    - We use maxHeap of size K 
+
+If we need to find K largest  
+    - We use minHeap of size K
+
+Basically vice versa 

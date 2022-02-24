@@ -1,0 +1,20 @@
+## Map ##
+map, set, multimap and multiset are normally implemented as binary trees (ex: in VS are implemented as Red Black Trees), 
+the find method in this case search the key using the property that in one node the left child is less 
+than the node (according to the comparer) and the right child is greater than the node (according to the comparer). 
+This give O(log n), as required by the standard.
+
+## UnorderedMap ##
+In the case of unordered_map and unordered_set are implemented as hash tables, normally implemented as a collection of 
+buckets (ex: std::vector<Bucket>) and the bucket is implemented as a collection of elements of 
+the unordered_map (ex: std::vector<elem> or std::list<elem>), assuming that hashing function is constant time 
+(or excluding the time), the search in this collections is in average constant time O(1) 
+(the hashing give the bucket where the element are placed, if there are few elem in the bucket search 
+between then the target elem). 
+The worst case is when all elements are in the same bucket in this case the search of the target element would need to 
+iterate through all elements in the bucket until found or not (in O(n)). With good hashing function you could increase 
+probability of split evenly enough the elem in the  bucket (obtaining the expected constant time).
+
+Note: the find function return a iterator that don't mean that use iterator to search the requested element.
+
+https://stackoverflow.com/questions/25457525/unordered-map-lookup-time

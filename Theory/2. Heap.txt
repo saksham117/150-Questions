@@ -1,0 +1,210 @@
+##########################################################################################################################
+Lecture 1: https://www.youtube.com/watch?v=ywx-Onrdx4U&list=PLUcsbZa0qzu3yNzzAxgvSgRobdUUJvz7p&index=32
+
+Heap is basically a complete Binary Tree that satisifes a heaps property
+
+A complete binary tree is a binary tree in which all the levels are completely filled except possibly the lowest one, 
+which is filled from the left. (https://www.programiz.com/dsa/complete-binary-tree)
+
+A complete binary tree is just like a full binary tree, but with two major differences
+1) All the leaf elements must lean towards the left. (ie are filled from left first)
+2) The last leaf element might not have a right sibling i.e. a complete binary tree doesn't have to be a full binary tree.
+
+##########################################################################################################################
+Also 
+A perfect binary tree is a type of binary tree in which every internal node has exactly two child nodes and all the 
+leaf nodes are at the same level.
+
+A full Binary tree is a special type of binary tree in which every parent node/internal node has either two or no children.
+
+##########################################################################################################################
+
+Now heap is basically of two types, a max heap or a min heap
+In max heap, a nodes children will always have values smaller than it 
+
+We required a complete binary tree as we wanted to represent this binary tree as an array 
+Heap main jitne bhi operation hoge, they will be in the form of array 
+
+We will do everything in max heap, but the principle is same for min heap.  
+
+For heap/bt 
+
+        50
+    40      45 
+  30   20  35  10
+
+  So we have 7 nodes 
+
+  We do a level order traversal and store it as an array 
+  (index 0 has nothing, we use 1 based indexing)
+
+  index:  0 1  2  3  4  5  6  7
+  value:  - 50 40 45 30 30 35 10
+
+  If i am on any given Node i 
+    - Parent(i) = floor(i/2)
+    - left_child(i) = 2*i 
+    - right_child(i) = 2*i + 1 
+
+(these properties hold because it is a complete binary tree)
+
+
+## Insertion ##
+- Suppose Insert 60
+- Insert it at very end of array that is index 8.
+- Compare it with its parent. If greater swap and continue the same process
+- Else stop and we have successfully  inserted element
+
+## Top ## 
+- Return arr[0] always
+
+## Deletion ##
+
+Heap is 
+        40 
+     30    10
+   20   15 
+   
+index: 1  2  3  4  5
+array: 40 30 10 20 15
+
+We always pop/delete the root node 
+
+- Steps 
+- Delete the topmost node, ie arr[1] = NULL 
+- Replace arr[1] with element at end of array/tree ie arr[5 here]
+- so now array is 15 30 10 20
+- Compare it with its left and right child. Replace it with the larger one 
+- Keep on repeating this till children of 15 are snaller than it 
+so final will be 30 20 10 15 
+
+Both Insert and delete ops have logn complexity as height of complete binary tree is always logn.
+
+##########################################################################################################################
+2nd Lecture : https://www.youtube.com/watch?v=UVW0NfG_YWA&list=PLUcsbZa0qzu3yNzzAxgvSgRobdUUJvz7p&index=42
+
+### Creation of Heap!! ###
+
+For eg, we have these elements: 20 10 30 5 50 40
+And we have an empty max heap and we need to insert elements into it 
+
+- If heap is empty, straightaway insert int it.  H: [20,]
+- For next element, insert it at the last index. But check, if it is greater than swap with its parents till it becomes head 
+  or it becomes smaller than its parents. Else do nothing 
+  H: [20,10]
+- Next: H: [30,10,20] (Draw tree to see why it happened)
+- Next: H: [30,10,20,5] (Draw tree to see why it happened)
+- Next: H: [50,30,20,5,10] (Draw tree to see why it happened)
+- Next: H: [50,30,40,5,10,20] (Draw tree to see why it happened)
+- I have written level order traversal of the binary trees  
+
+So time taken for this was nlogn as there were n elements and for each element, it taked logn time for insertion. 
+
+So this is one of the ways. But Heap ais nahi banti, we have a method called Heapify!!
+That takes just O(N) time to form a heap. 
+
+### Heapify!! ###
+
+So we are again given these elements 20 10 30 5 50 40, and we need to convert them into this maxHeap [50,30,40,5,10,20]
+Now instead of filling it as an array 
+Consider it as a tree 
+
+            20
+           /  \
+          10  30
+         /  \ /
+        5  50 40
+
+Now take the element from last. We have 40. It is the leaf node in the tree 
+Just check that if we just had 40, would it represent a max heap, Answer is yes!
+Same logic for 5 and 50.
+
+Now coming to 30. If 30 was the head of a maxHeap, would it represent a maxHeap. Answer is no. As it has 40 as a child 
+Which is greater than it. 
+So we swap 30 and 40 
+
+Tree becomes 
+            20
+           /  \
+          10  40
+         /  \ /
+        5  50 30
+
+Now coming to 10. If 10 was the head of a maxHeap, would it represent a maxHeap. Answer is no. As it has 50 as a child 
+Which is greater than it. 
+So we swap 10 and 50 
+Tree becomes 
+            20
+           /  \
+          50  40
+         /  \ /
+        5  10 30
+
+
+Now coming to 20. If 20 was the head of a maxHeap, would it represent a maxHeap. Answer is no. As it has 50 and 40 as a child 
+Which is greater than it. 
+So we swap 20 with greater of the 2, ie 50 
+
+Tree becomes 
+            50
+           /  \
+          20  40
+         /  \ /
+        5  10 30
+
+So this is a maxHeap. This is not the same config as the config we got earlier. But maxHeap for same elements can have multiple
+configs. 
+So what is time complexity?
+O(N)
+
+Logic: Leaf Nodes are approx n/2 if no of nodes are n. 
+And rest can be calculated by gp :)
+
+Leaf nodes start from floor(n/2) + 1 and range till index n (we have 1 based indexing )
+
+So what below code does is, it takes the current node I
+And checks if the tree with it being the root results in an heap or not 
+
+void heapify(int a[], int n, int i){
+
+    int largest = i;
+    int l = 2*i;
+    int r= 2*i + 1;
+
+    {% comment %} If there is a larger child, select the largest amongst the two {% endcomment %}
+    if(l <= n && a[l] > a[largest]){
+        largest =l;
+    }
+
+    if(r <= n && a[r] > a[largest]){
+        largest =r;
+    }
+
+    {% comment %} If element larger than root does exist, then we need to swap and check further {% endcomment %}
+    if(i != largest){
+        swap(arr[i], arr[largest]);
+        heapify(a,n,largest); // largest is the new index
+    }
+}
+
+void buildHeap(int a[], int n){
+    {% comment %} we started from n/2 as there is no need to check leaf nodes, as they already represent a heap {% endcomment %}
+    for(int i = n/2; i > 0; i--){
+        heapify(a,n,i);
+    }
+}
+
+{% comment %} While implementation, to avoid extra steps to convert 1 based indexing to 0 based indexing
+We can instead define left as 2*i + 1 and right as 2*i + 2
+And the for loop in buildHeap will go till 0 instead of 1 {% endcomment %}
+
+
+
+### Heap Sort ###
+
+1) Given an array, convert into heap using buildHeap method. 
+2) Pop elements one by one, and we will get the sorted array 
+
+Time complexit = Nlogn 
+N for buildheap and for each element deletion will take logn time 
+So Nlogn

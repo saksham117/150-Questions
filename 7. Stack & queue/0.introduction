@@ -1,0 +1,18 @@
+Identification
+    - Most of the stack questions have an array.
+    - Brute force of questions that should ideally be solved by stacks, will have time complexity n^2,
+      But, in this, the second loop will be dependent on first loop 
+
+      for example:
+
+      for(int i = 0; i < n; i++)
+      {
+          for(j = 0; j < i; j++ )
+          {
+
+          }
+      }
+
+      So some sort of dependence on i!! 
+
+      

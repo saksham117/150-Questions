@@ -1,0 +1,173 @@
+1) Insert 
+push_back(), append, + 
+str.insert(startIndex, string/char)
+
+2) delete 
+pop_back(), erase(startIndex, length)
+
+3) substring 
+str2 = str1.substr(startIndex, length);
+
+4) replace 
+str.replace(startIndex,length, newString)
+
+5) find and rfind
+str.find(char or string)
+
+6) compare
+str1.compare(str2)
+
+// CPP code for demonstrating
+// string::compare (const string& str) const
+
+#include<iostream>
+using namespace std;
+
+void compareOperation(string s1, string s2)
+{
+	// returns a value < 0 (s1 is smaller then s2)
+	if((s1.compare(s2)) < 0)
+		cout << s1 << " is smaller than " << s2 << endl;
+
+	// returns 0(s1, is being compared to itself)
+	if((s1.compare(s1)) == 0)
+		cout << s1 << " is equal to " << s1 << endl;
+	else
+		cout << "Strings didn't match ";
+	
+}
+
+// Driver Code
+int main()
+{
+	string s1("Geeks");
+	string s2("forGeeks");
+	compareOperation(s1, s2);
+	
+	return 0;
+}
+
+https://www.geeksforgeeks.org/stdstringcompare-in-c/
+
+7) to_string, stoi, atoi 
+
+8) length 
+
+###################### Important Functions ###########################
+
+## getline ##
+The C++ getline() is a standard library function that is used to read a string or a line from an input stream.
+by default cin se ek hi word input le sakte hain
+
+istream& getline(istream& is, string& str, char delim);
+
+ Parameters: 
+
+is: It is an object of istream class and tells the function about the stream from where to read the input from.
+str: It is a string object, the input is stored in this object after being read from the stream.
+delim: It is the delimitation character which tells the function to stop reading further input after reaching this character.
+
+
+## stringstream ##
+A stringstream associates a string object with a stream allowing you to read from the string as if it were a stream (like cin).
+
+clear() — to clear the stream
+str() — to get and set string object whose content is present in stream.
+operator << — add a string to the stringstream object.
+operator >> — read something from the stringstream object,
+
+Example 1
+int countWords(string str)
+{
+    // breaking input into word using string stream
+    stringstream s(str); // Used for breaking words
+    string word; // to store individual words
+  
+    int count = 0;
+    while (s >> word)
+        count++;
+    return count;
+}
+
+
+Application:
+
+I can use stringstream the following ways 
+1) To extract words from a sentence. 
+    - basically creating a stringstream object of that str 
+    - and iterating over that ss object using while and >>
+
+
+2) Given a sentence, differentiate it on basis of ',' or any other delimiter 
+
+{% comment %} my code {% endcomment %}
+#include <iostream>
+    #include<string>
+    #include<vector>
+    #include<sstream>
+    
+    using namespace std;
+    int main() {
+        // Write C++ code here
+        string str1 = "1,2,3,4,5,6";
+        
+        stringstream ss(str1);
+        vector<string> numbers;
+        string str2;
+        for(int i = 0; i < str1.length(); i+=2){
+                getline(ss,str2, ',');
+                cout<<str2<<" ";
+        }
+    
+        return 0;
+    }
+
+    {% comment %} gfg code {% endcomment %}
+    https://www.geeksforgeeks.org/program-to-parse-a-comma-separated-string-in-c/
+
+    So use stringstream only when words can be separted on the basis of spaces 
+    In all other cases, use it along with getline 
+
+    https://www.geeksforgeeks.org/getline-string-c/
+    https://www.geeksforgeeks.org/stringstream-c-applications/
+
+
+3) By default cin is only capable of taking one word/string as input 
+    To take multi word input, we need to use getline 
+    getline(cin,str)
+
+    cout << "Please enter your name: \n";
+	getline(cin, str);
+
+
+    Edge Case 
+
+    If above a getline() func, we have called a normal cin 
+    Then by default cin sends a '\n' to the stream 
+    So next time you call getline(), it will accept this '\n' as the delimiter and wont take any input 
+    
+    So in that scenario, we need to add cin.ignore(1. '\n')
+    #include <iostream>
+        #include <string>
+        using namespace std;
+        
+        int main()
+        {
+            string str;
+            int id;
+            
+            cout << "Please enter your id: \n";
+            cin >> id;
+            cin.ignore(1,'\n')
+            cout << "Please enter your name: \n";
+            getline(cin, str);
+            cout << "Hello, " << str
+                << " welcome to GfG !\n";
+        
+            return 0;
+        }
+
+##################### Summary ##################### 
+To take multi word input, use getline 
+To process any string via some delimiters use ss in combination with getline to get desired results
+If onyl space is the delimiter, then ss work alone fine, else you have to use it in combination with getline()

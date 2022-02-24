@@ -1,0 +1,109 @@
+#################################### Seen  ####################################
+1) https://youtu.be/R81Y67ujwzY (Coding Ninjas ) Five Things That Helped Me Crack Microsoft
+2) https://www.youtube.com/watch?v=8Myx-vy0csM (Microsoft) How to prepare for your Microsoft interview: Technical Interviews
+3) https://www.youtube.com/watch?v=xwcdg6pCHmE (Mock Interview Questions: Trailing Zeroes + Group Anagrams)
+4) https://www.youtube.com/watch?v=pjs1ZLjZhzk (Akshay Saini Interview)
+5) https://www.youtube.com/watch?v=pjs1ZLjZhzk (GFG Microsoft Most asked questions)
+6) https://youtu.be/O4zB91sMKhM                (GFG Microsoft Most asked questions 2)
+7) Stacks ~ Aditya Verma https://www.youtube.com/playlist?list=PL_z_8CaSLPWdeOezg68SKkeLN4-T_jNHd
+
+
+
+#################################### Question Practice  ####################################
+1) https://www.codingninjas.com/codestudio/problem-lists/top-microsoft-coding-interview-questions?utm_source=youtube&utm_medium=organic&utm_campaign=5_things_microsoft_video
+2) https://www.interviewbit.com/search/?q=Microsoft
+
+
+6) Remove duplicates from string and arrange its letters in order !Unclear question
+12) 
+
+
+#################################### Playlists #################################### 
+SDE SHEET 150 Questions: https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/ 
+Striver Binary Tree Series https://www.youtube.com/watch?v=OYqYEM1bMK8&list=PLgUwDviBIf0q8Hkd7bK2Bpryj2xVJk8Vk
+Striver Placement Series https://www.youtube.com/playlist?list=PLgUwDviBIf0p4ozDR_kJJkONnb1wdx2Ma
+
+DP ~ Aditya Verma https://www.youtube.com/playlist?list=PL_z_8CaSLPWekqhdCPmFohncHwz8TY2Go
+Binary search ~ Aditya Verma https://www.youtube.com/playlist?list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2
+Sliding Window ~ Aditya Verma https://www.youtube.com/playlist?list=PL_z_8CaSLPWeM8BDJmIYDaoQ5zuwyxnfj
+Recursion ~ Aditya Verma https://www.youtube.com/playlist?list=PL_z_8CaSLPWeT1ffjiImo0sYTcnLzo-wY
+
+
+Heap ~ Aditya Verma https://www.youtube.com/playlist?list=PL_z_8CaSLPWdtY9W22VjnPxG30CXNZpI9
+Graphs ~ Code N Code / Striver https://www.youtube.com/playlist?list=PLgUwDviBIf0rGEWe64KWas0Nryn7SCRWw + 150 Q vaale set se
+
+OS: https://www.youtube.com/playlist?list=PLxCzCOWd7aiGz9donHRrE9I3Mwn6XdP8p
+
+####################################  Other Important topics to cover #################################### 
+    Sorting(Bubble, Insertion, Selection, Quick, Count, Merge, Bucket) (Anuj Bhaiya https://www.youtube.com/watch?v=N89PN_uyelU&list=PLUcsbZa0qzu3yNzzAxgvSgRobdUUJvz7p)
+    Set Vs Unordered Set
+    List in C++
+    Deque in C++ 
+    OS CN DBMS https://takeuforward.org/interviews/must-do-questions-for-dbms-cn-os-interviews-sde-core-sheet/
+    OOPS 
+    string methods
+    - Revise Heaps and Maps.
+    - Revise al projects 
+    - Write the maps vaala note 
+
+
+    To Create Note:
+    incase of maps like map<int, vector<int>>
+    No need to define like  this 
+    vector<int> V 
+        map[0] = V;
+    
+    a vector would be provided to us 
+    same goes for map<int, map<int, vector>> 
+    
+    But only when I create my adjancy list with vector<int> as *
+    Do I need to create a new vector and then assign it to my map[i]
+    
+    
+
+#################################### Resume #################################### 
+
+
+    
+###################### During Interview ###################### 
+    - Dress Well (Dress to impress) (Not necessarily formals, background noise should be minimal)
+    - Prepare a good introduction (Name, city, college, cgpa, internships, projects)
+    - Present solution to DSA problem (first discuss about the problem, take few test cases, discuss brute force and code optimal)
+    (Keep on talking to the interviewer, discuss every line of code you write, very evry line)
+    - Take some edge cases and try to show your code works 
+    - Discussion regarding your project
+        (Project should be hosted or running so that you can show it to him)
+        (He never asks the code)
+        (Tell him the tech stack)
+        (Tell its features)
+        (And interviewer ka general question hoga ki how did you do it(not codewise, but in general))
+        (Another q could be ki what are some problems you faced and how did you solve it)
+        (What future scope do you want)
+
+
+Must Do 
+    - All subsets for a given sum 
+    - Minimize number of students to be removed (GFG : https://www.youtube.com/watch?v=Wwi-K6rEAfU)
+
+
+If time 
+    - Binary search more problems given in notes page of Binary search folder.
+
+To Do
+    - Longest Valid paranthesis
+    - Tower of Hanoi(recursive and iterative)
+    - Largest rectangle in histogram (One pass solution)
+    - Kth Largest Element in an Array (using quicksort technique)
+
+
+Arsh Goyal 
+    - OOPS and OS and low level system design 
+
+
+General: 
+AA round stands for As Appropriate (basically HR + technical)
+- GFG interview experiences 
+- OS DBMS and OOPS ?
+- Solutions dekhlo if less time 
+- low level system design 
+- Sliding window, dp, trees, 2 pointer, dfs, bfs 

@@ -1,0 +1,7 @@
+http://www.cs.gettysburg.edu/~ilinkin/courses/Fall-2020/cs216/notes/bintree.pdf
+
+2^0 + 2^1 so on is a gp 
+https://en.wikipedia.org/wiki/Geometric_progression#:~:text=In%20mathematics%2C%20a%20geometric%20progression,number%20called%20the%20common%20ratio.
+
+sum is this  a(1-r^n)/(1-r)
+term = ar^n-1 

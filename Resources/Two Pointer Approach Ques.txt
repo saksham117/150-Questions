@@ -1,0 +1,11 @@
+0. Merge function of merge sort
+1. Sort an array of 0’s 1’s 2’s (left, right, middle)
+2. Find the duplicate in an array of N+1 integers.(slow and fast pointer)
+3. 2 Sum, 3 Sum, 4 sum (left and right)
+4. Longest Substring without Repeat(left and right)
+5. Middle of LL
+6. Cycle Detection in LL
+7. Find intersection point of Y LinkedList 
+8. Check if two trees are identical or not 
+9. Symmetric tree 
+10. Create Tree from post and in (4 pointers)

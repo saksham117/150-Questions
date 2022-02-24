@@ -1,0 +1,132 @@
+1) Bubble Sort 
+    - Simplest sorting algorithm 
+    - Takes O(N^2) on average 
+    - Is very very easy to code. The basic principle is that lighter(smaller) elements bubble up to the top. 
+      So at every iteration, we place the heaviest element at the last unsorted location, i.e. in first iteration 
+      we will go till n, then till n-1 only and so on 
+
+    - The algorithm can be easily optimized by introducing a flag variable, which becomes set if a swap occurs in the inner loop 
+      If in the inner for loop, no swap occurs and the flag variable remains unset, that means the array is already sorted. 
+      So we can stop our search there. 
+
+    - Worst Case: O(N^2) -> When array is reverse sorted 
+    - Best Case: O(N) -> When array is already sorted and we have optimized the code by adding the flag variable. 
+    - Auxillary space: O(1) 
+
+
+2) Insertion Sort 
+    - Again pretty simple and straightforward
+    - And yes I was able to code it. And yes it uses a for loop outside and while loop inside. No need to worry :)
+    - Here the crux is the every time we iterate, we insert the element at the right location in the already sorted array 
+
+    - Average complexity : O(N^2)
+    - Worst Case: O(N^2) ; When array is reverse sorted 
+    - Best Case: O(N): When array is already sorted 
+    - Auxillary space: O(1)
+
+3) Selection Sort 
+    - Again pretty pretty simple.
+    - I was able to code it 
+    - Here we select the index where we want to place the correct element (as it woould appear in a sorted array)
+        In other words we find the minimum element starting from that index 
+
+    - Time complexity: O(N^2): Same for average, best and worst 
+    - Auxillary Space: O(1)
+
+    - Is useful when memeory utilization due to swaps need to be minimized. This is because in case of selection sort,
+      only a maximum of O(N) swaps can occur. No more than that. 
+
+
+4) Merge Sort 
+    - The more optimized sorting algorithms. 
+    - I know how to code them. Basically 2 functions, one is the merge func(for sorting two smaller sorted arrays to a single sorted array)
+      and the second is the recursive mergeSort function. 
+    
+    - Time complexity: O(nlogn) -> Can be derived from the recursion tree or Master Therorem (Avg, best and worst have same complexity)
+    - Space complexity: O(n): This additional space is required in the merge function 
+    
+    - Application: Sorting a linked List, Count Inversions 
+     
+    - Drawbacks: 
+        1) Even a fully sorted array takes O(NlogN) time 
+        2) Additional memeory space is required.
+
+
+5) Quick Sort 
+    - Another one of the optimized sorting algorithms, although not my favourite. 
+    - Here again 2 functions : 1) Partition(which returns the index where we need to partition the array) and 2) Recursive Quick Sort 
+
+    - Was able to code it comfortably this time, though.
+
+    - Here a lot of dicussion on time complexity:
+        1) General relation T(N) = T(K) + T(n - K - 1) + O(N)
+        2) Worst Case occurs when we pick either the smallest element or the greatest element(in case of sorted or reverse sorted array)
+            This happens because while doing divdie and conquer, one side has 1 element and the other has remaining n-1 elements 
+
+            This results in complexity of O(N^2) in worst Case. 
+
+        3) Best Case: When partitionm that is picked is alwasy the middle most element, dividing the array into two equal halves. 
+            Results in complexity of O(nlogn), calcylated using Recursion tree or masetr theorem 
+
+    Space complexity: O(1) A major advantage over merge sort. 
+
+LINK FOR QUICK SORT: https://www.geeksforgeeks.org/quick-sort/
+
+        TWO IMPORTANT QUESTIONS 
+        1) Why Quick Sort is preferred over MergeSort for sorting Arrays ?
+
+        Quick Sort in its general form is an in-place sort (i.e. it doesn’t require any extra storage) 
+        whereas merge sort requires O(N) extra storage, N denoting the array size which may be quite expensive. 
+        Allocating and de-allocating the extra space used for merge sort increases the running time of the algorithm. 
+
+        Comparing average complexity we find that both type of sorts have O(NlogN) average complexity but the constants differ. 
+        For arrays, merge sort loses due to the use of extra O(N) storage space.
+
+        Most practical implementations of Quick Sort use randomized version. 
+        The randomized version has expected time complexity of O(nLogn). The worst case is possible in randomized version also, 
+        but worst case doesn’t occur for a particular pattern (like sorted array) and randomized Quick Sort works well in practice.
+        Quick Sort is also a cache friendly sorting algorithm as it has good locality of reference when used for arrays.
+        Quick Sort is also tail recursive, therefore tail call optimizations is done. 
+
+        2) Why MergeSort is preferred over QuickSort for Linked Lists? 
+        In case of linked lists the case is different mainly due to difference in memory allocation of arrays and linked lists. 
+        Unlike arrays, linked list nodes may not be adjacent in memory.
+        Unlike array, in linked list, we can insert items in the middle in O(1) extra space and O(1) time. 
+
+        "Therefore merge operation of merge sort can be implemented without extra space for linked lists."
+
+        In arrays, we can do random access as elements are continuous in memory. Let us say we have an integer (4-byte) array A 
+        and let the address of A[0] be x then to access A[i], we can directly access the memory at (x + i*4). 
+        Unlike arrays, we can not do random access in linked list. 
+
+        Quick Sort requires a lot of this kind of access. 
+        In linked list to access i’th index, we have to travel each and every node from the head to i’th node as 
+        we don’t have continuous block of memory. Therefore, the overhead increases for quick sort. 
+        Merge sort accesses data sequentially and the need of random access is low. 
+
+
+6) Heap Sort
+ 
+
+Non Comparison Based Sorting Algorithms 
+
+1) Count Sort 
+
+2) Bucket Sort 
+
+
+
+
+
+
+
+
+
+Stability in sorting algorithms
+
+Stability is mainly important when we have key value pairs with duplicate keys possible (like people names as 
+keys and their details as values). And we wish to sort these objects by keys.
+
+What is it?
+A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output
+as they appear in the input array to be sorted.

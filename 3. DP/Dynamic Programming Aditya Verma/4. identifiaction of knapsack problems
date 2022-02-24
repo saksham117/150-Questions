@@ -1,0 +1,19 @@
+// so the next 6 problems are gonna be based on Knapsack
+
+1) Subset Sum Problem
+2) Equal Sum Partition
+3) Count of Subset Sum
+4) Minimum Subset Sum Differnce
+5) Target Sum
+6) Numer of subsets of given problem
+
+In all these problems, the initialization will be a little differnet
+
+We can think that in Knapsack we were given an item array divided into two
+that is weight array and value array.
+
+So it is possible in the incoming problems, the array given to us will only represent one entity.
+So if only one array is given, we are gonna consider it like weight array
+	
+So in any of the problems, where we are given some items and we need to fit them in a container or a bag with a choice 
+that we can include that elemnt or not then it will be a knapsack problem

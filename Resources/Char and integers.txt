@@ -1,0 +1,9 @@
+1) To get integer from char 
+    char c = '7'
+    int n = c - '0'
+    cout<<n;
+
+2) to increment char 
+    char c = '7';
+    c = c + 1;
+    cout<<c;

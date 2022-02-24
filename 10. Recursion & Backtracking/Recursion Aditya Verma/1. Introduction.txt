@@ -1,0 +1,26 @@
+Identifying Recursion Questions 
+    - We will be given choices and decisions. 
+
+Primary task is taking a decision on what to do. Secondary task, which happens as a result of primary task 
+is that inout gets reduced. But our focus should always be on the primary task. Secondary task will happen automatically as 
+a result of primary task. 
+
+No of branches in recursive tree is number of choices!
+He told t form recursive tree using input, output method, where number of choices is nmber of decisions 
+And as we move down a level in tree, we make a choice 
+
+So he is saying 
+1) First draw recursive tree(for a smaller and simple example)
+2) Write code for that recursive tree 
+
+Do this in the case, when my conventional approach that is base and hypothesis approach does not work. 
+
+As of now, I used to do in opposite way. i.e first write the code and then check it via a tree. 
+Lets see which approach turns out to be better 
+
+So whenever we see a question of recursion.
+    We try to achieve it in 3 ways and go to the next way only if previous way fails or you are not able t dedecue the solution from it 
+        1) IBH (Induction Base Hypotheses Method, jahan par bus input small hopti and choices nahi hoti)
+        2) Recursion Trees (jahan choices involve ho jaati hain, starting from q8: Power set of X) 
+        3) Choice Diagram 
+        

@@ -1,0 +1,19 @@
+- Left Scrambled Strings and valid expression for now 
+
+- Maximum Problems covered by Aditya Verma 
+- Edit Distance and Min Cost Path : 2 problems for which once we write recursive code, dp can be made using aditya verma approach 
+
+### Another Set ###
+Longest Increasing Subsequence  : Recursive approach and dp approach have some difference
+But now I found a appraoch that aligns with Aditya verma too!!
+Word Break DP  : Recursive approach and dp approach have some difference (Done in Recursion folder)
+Longest Palindromic Substring : Here our first apporach does not work directly. Have to add on to it. Other approaches to it 
+are quite complex.
+
+### MCM ###
+In MCM, 
+1) Step is to always calculate low and high 
+2) Most of the times low would be 0 and high length() - 1
+3) Only in MCM, i was started as 1, coz we had to access arr[i-1]
+
+4) Alwasy k goes from i <= k and k < j (k iss less than j), coz in my second partition i check from k+1. So ck cannot go to j

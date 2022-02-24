@@ -1,0 +1,15 @@
+Identifying
+
+1) Are you doing repetitive work?
+2) Usually works on arrays or strings and more importantly, they would either be subarrays or subtrings(ie contiguous)
+3) And there in find largest, count or minimum or something like that 
+4) You will be given k, which would basically be the window size.
+
+
+Types 
+1) Fixed Size Window 
+2) Variable Size Window (these are more trickier q) 
+
+Differenc btw the 2 with an example 
+    - In first we would be given what is the max sum in window of size = k
+    - In second, we would be given the sum and we need to find either largest or smallest subarray having that sum 

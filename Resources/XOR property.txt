@@ -1,0 +1,2 @@
+1) Find all arrays having XOR = b 
+2) Only single Element in a sorted list 

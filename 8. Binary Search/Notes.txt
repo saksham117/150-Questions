@@ -1,0 +1,26 @@
+###################### Special Cases where low = mid + 1 or high = mid -1 are not followed ###################### 
+    1. Number of times Sorted Array is rotated
+    2. Nth root of an integer (both 1 and 2 set low/high to mid itself)
+    3. In books we return low whereas in cows we return high(beacues one asks min, other asks max)
+    I like all problems except median of a 2d matrix
+
+Related Problems For Practice (based on allocate pages problem) :
+
+    - 1552. Magnetic Force Between Two Balls (Done, exactly same as Aggressive cows)
+
+Prata and roti (spoj)
+EKO (spoj)
+Painter Partition Problem
+
++ Below Leetcode Problems
+1870. Minimum Speed to Arrive on Time
+1482 Minimum Number of Days to Make m Bouquets
+1283 Find the Smallest Divisor Given a Threshold
+1231 Divide Chocolate
+1011 Capacity To Ship Packages In N Days
+875 Koko Eating Bananas
+Minimize 
+774 Max Distance to Gas Station
+410 Split Array Largest Sum
+2064. Minimized Maximum of Products Distributed to Any Store
+

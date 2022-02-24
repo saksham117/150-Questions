@@ -1,0 +1,8 @@
+Left for Now: 
+    - Kosarajus Algorithm
+    - Floyd Warshall Algorithm
+
+
+    There is a difference between M coloring dfs and Bipartite(2 coloring) DFS 
+    In biparttite, we just check the next node and if its color is different. Here in M coloring, we have to check all 
+    adjacent nodes and then only assign color.

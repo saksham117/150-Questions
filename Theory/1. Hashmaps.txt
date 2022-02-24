@@ -1,0 +1,29 @@
+Key Value Pair, where key and value can be of any type 
+Keys are always unique 
+
+- All operations: Insert Search and Delete happen in O(1) 
+
+- Unordered_Maps are implemenetd via Hashing whereas Ordered maps are implemenetd via Self balancing Binary Search Trees 
+
+We are gonna discuss unorderd maps and their implementation via Hashing
+
+- Hashing has two main functions 
+    - 1) Hash function 
+    - 2) Compression Function 
+
+Key Point : In hash function, for same input say 'i', we will always get the same output lets sat 'o'. But it is also possible 
+            that for some other input , 'i`', we also might get the same ouput 'o' from the hash function. 
+            This is called collisions and we try to avoid this as much as possible. 
+    
+    1) Hash Functions 
+
+        - Maps large values to smaller numbers. eg h(17834838348) = 7, h('saksham') = 1
+        - Key generation should happen in O(1) time. Or O(len) in case of strings 
+        
+        
+            Then we discussed types of Hash functions, like mod(n) for integer keys, 
+            using wiighted sum of indexes for string keys 
+            
+
+        - Should uniformally distribute large keys into hash table slots 
+
